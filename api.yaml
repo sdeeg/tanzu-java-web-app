@@ -1,0 +1,26 @@
+---
+swagger: "2.0"
+info:
+  description: "Swagger API definition for the suppliers apis"
+  version: "0.0.2"
+  title: "APIs to interact with suppliers external systems"
+host: suppliers.gns.dekt.io
+basePath: "/v1"
+tags:
+- name: "Greeter"
+  description: "Greet API"
+schemes:
+- "http"
+paths:
+  /hello:
+    get:
+      tags:
+      - "Data collection"
+      summary: "Get hello"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "successful greeting"
+        400:
+          description: "no greeting for you"
