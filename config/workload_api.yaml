@@ -5,11 +5,21 @@ metadata:
   labels:
     apps.tanzu.vmware.com/workload-type: web
     app.kubernetes.io/part-of: tanzu-java-web-app
+    apis.apps.tanzu.vmware.com/register-api: "true"
 spec:
   params:
   - name: annotations
     value:
       autoscaling.knative.dev/minScale: "1"
+  - name: api_descriptor
+    value:
+      type: asyncapi
+      location:
+        baseURL: "https://raw.githubusercontent.com"
+        path: "/sdeeg-vmware/tanzu-java-web-app/main/api.yaml"
+      owner: my_team
+      system: my_system
+      description: "api for java app"
   source:
     git:
       ref:
