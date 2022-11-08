@@ -1,10 +1,10 @@
 ---
 swagger: "2.0"
 info:
-  description: "Swagger API definition for the suppliers apis"
+  description: "Swagger API definition for the greeting"
   version: "0.0.2"
-  title: "APIs to interact with suppliers external systems"
-host: suppliers.gns.dekt.io
+  title: "APIs to interact with greeters"
+host: greeting.planet10.lab
 basePath: "/v1"
 tags:
 - name: "Greeter"
